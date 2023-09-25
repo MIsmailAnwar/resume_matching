@@ -18,6 +18,8 @@ install required python packages
 
 > pip install -r requirements.txt
 
+> python -m spacy download en_core_web_sm
+
 make django migrations
 
 > py manage.py makemigrations
