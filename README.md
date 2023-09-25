@@ -1,7 +1,7 @@
 # resume_matching
 Resume matching
 
-## Setup
+## CMD Setup
 cd to you working directory
 
 > cd to-your-working-directory
@@ -12,7 +12,7 @@ create a virtual environment
 
 activate the python venv
 
-> source venv/Scripts/activate.bat
+> venv\Scripts\activate.bat
 
 install required python packages
 
