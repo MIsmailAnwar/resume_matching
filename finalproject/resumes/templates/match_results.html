@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Match Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Match Results</h1>
+    <table>
+        <tr>
+            <th>Filename</th>
+            <th>Title</th>
+            <th>Similarity Score</th>
+        </tr>
+    {% for profile in ranked_profiles %}
+        {% if forloop.counter <= 10 %}
+            <tr>
+                <td><a href="{% url 'serve_pdf_by_filename' filename=profile.filename %}" target="_blank">{{ profile.filename }}</a></td>
+                <td>{{ profile.title }}</td>
+                <td>{{ profile.similarity_score|floatformat:2 }}</td>
+            </tr>
+        {% endif %}
+    {% endfor %}
+    </table>
+</body>
+</html>
