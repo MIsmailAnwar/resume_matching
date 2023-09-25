@@ -11,9 +11,10 @@ class JobDescriptionForm(forms.Form):
     similarity_method = forms.ChoiceField(
         label='Similarity Calculation Method',
         choices=[
-            ('tfidf', 'TF-IDF'),
             ('word2vec', 'Word2Vec'),
+            ('tfidf', 'TF-IDF'),
+            
         ],
         widget=forms.RadioSelect,
-        initial='tfidf', 
+        initial='word2vec', 
     )
