@@ -8,7 +8,7 @@ cd to you working directory
 
 create a virtual environment
 
-> python -m env venv
+> python -m venv venv
 
 activate the python venv
 
